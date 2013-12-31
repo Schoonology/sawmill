@@ -108,9 +108,11 @@ available on the root module (e.g. `require('sawmill').human`).
  * `human` - A batteries-included `console` logger for consumption by humans.
     * Levels "info" through "warn" are sent to `process.stdout`
     * Level "error" is sent to `process.stderr`.
-    * If DEBUG is set, it is used as a filter and level "debug" is sent as well.
+    * If DEBUG is set, it is used as a filter and level "debug" is sent to
+    stderr as well.
     * If NODE_ENV is set to "development", level "debug" is sent.
-    * Setting NODE_ENV to "production" silences all log levels, even "error".
+    * Setting NODE_ENV to "production" or "test" silences all log levels, even
+    "error".
     * Output is formatted for human readability, and is _not_ JSON.
 
 ## Alternatives
