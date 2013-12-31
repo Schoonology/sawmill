@@ -2,9 +2,9 @@
   "name": "sawmill",
   "version": "0.1.0",
   "description": "Where logs go to be cut up and sent elsewhere.",
-  "main": "index.js",
+  "main": "lib/sawmill.js",
   "scripts": {
-    "test": "mocha --reporter spec"
+    "test": "mocha --ui exports --reporter spec"
   },
   "repository": "",
   "keywords": [
@@ -13,5 +13,10 @@
     "console"
   ],
   "author": "Michael Schoonmaker <michael.r.schoonmaker@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "nexpect": "~0.3.0",
+    "mocha": "~1.16.2",
+    "once-later": "~1.0.1"
+  }
 }
