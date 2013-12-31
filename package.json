@@ -1,6 +1,6 @@
 {
   "name": "sawmill",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Where logs go to be cut up and sent elsewhere.",
   "main": "lib/sawmill.js",
   "scripts": {
