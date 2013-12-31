@@ -18,5 +18,8 @@
     "nexpect": "~0.3.0",
     "mocha": "~1.16.2",
     "once-later": "~1.0.1"
+  },
+  "dependencies": {
+    "colors": "~0.6.2"
   }
 }

@@ -105,11 +105,13 @@ self-explanatory. Change at will.
 These streams are provided to make working with Mills' output easier. They are
 available on the root module (e.g. `require('sawmill').human`).
 
- * `human` - A batteries-included `console` logger. By default, "info" through
- "warn" are sent to `process.stdout`, while "error" is sent to `process.stderr`.
- If DEBUG is set, it is used as a filter and "debug" is sent as well. If
- NODE_ENV is set to "development", "debug" is sent, whereas setting NODE_ENV to
- "production" silences all log messages.
+ * `human` - A batteries-included `console` logger for consumption by humans.
+    * Levels "info" through "warn" are sent to `process.stdout`
+    * Level "error" is sent to `process.stderr`.
+    * If DEBUG is set, it is used as a filter and level "debug" is sent as well.
+    * If NODE_ENV is set to "development", level "debug" is sent.
+    * Setting NODE_ENV to "production" silences all log levels, even "error".
+    * Output is formatted for human readability, and is _not_ JSON.
 
 ## Alternatives
 
