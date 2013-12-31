@@ -50,8 +50,10 @@ var mill = require('sawmill')('app:Server')
 ### Logging
 
 Once you have a Mill, it's time to send it logs. There are only two kinds of
-logs Sawmill understands: Objects and Messages. You may only send one at a time,
-and the delimiter is thus: _anything that is not of type "object" is a Message._
+logs Sawmill understands: Objects and Messages. The delimiter is thus:
+_anything that is not of type "object" is a Message._ If an Object is sent and
+more arguments are available, those arguments will be treated as a Message,
+added to the Object accordingly.
 
 ```
 mill.log('Some message') // Send a Message to log level "info".
@@ -62,6 +64,8 @@ mill.warn('Same for "warn"')
 mill.error('Same for "error"')
 
 mill.trace('This describes stuff') // Send a Message with a stack trace.
+
+mill.info({ key: 'value' }, 'Indecisive, so sent both.') // Send both.
 ```
 
 ### Output Format
